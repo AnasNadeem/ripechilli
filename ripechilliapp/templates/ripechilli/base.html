@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% for i in keyword %}
+    <meta name="keywords" content="{{ i.terms }}">
+    {% endfor %}
+    <link rel="icon" href="{% static 'ripechilli/images/chilloi.svg' %}" sizes="any" type="image/svg+xml">
+    <!-- Bootstrap CSS  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+    <!-- StyleIndex CSS  -->
+    <link rel="stylesheet" href="{%static 'ripechilli/css/styleindex.css'%}">
+    <!-- Sidebar CSS  -->
+    <link rel="stylesheet" href="{%static 'ripechilli/css/sidebar.css'%}">
+    <!-- Sidebar CSS  -->
+    <link rel="stylesheet" href="{%static 'ripechilli/css/preloader.css'%}">
+    <!-- Font awesome css  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Google Fonts  -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Quicksand:wght@300;400&display=swap"
+        rel="stylesheet"> -->
+    <!-- Animate css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <title>{% block title %} {% endblock title %}</title>
+</head>
+
+<body style="background-image: url({%static 'ripechilli/images/lowpoly.svg'%});">
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    <!-- Navbar Starts Here  -->
+    
+    <!-- Navbar Starts Here  -->
+    <nav class="navbar navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand"><span id="openSidebarTrigger"><i class="fa fa-stream sidebarlogo"
+                        aria-hidden="true"></i></span></a>
+            <a class="navbar-brand mr-auto" href="{% url 'Index' %}">
+                Ripe Chilli<img src="{%static 'ripechilli/images/chilloi.svg'%}" height="50" alt="RC logo">
+            </a>
+            <!-- Sidebar begins  -->
+            <div id="sidebar" class="sidenav" style="background-image: url({%static 'ripechilli/images/grid.svg'%})">
+                <h2 class="sideNavTitle">Hello!!
+                </h2>
+                <a class="closebtn" id="CloseBtnId">&times;</a>
+                <div class="container sidenavcont">
+                    <li><a href="{%url 'WebSamples'%}">Web Samples</a></li>
+                    <li><a href="{%url 'Website'%}">Web Development</a></li>
+                    <li><a href="{%url 'Logo'%}">Logo Development</a></li>
+                    <li><a href="{%url 'Contact'%}">Contact Us</a></li>
+                    <li><a href="{%url 'About'%}">About Us</a></li>
+                    <!-- Sidebar Ends  -->
+                </div>
+                <!-- <p class="footerSideNav">Copyright</p> -->
+            </div>
+            {% block navml %}
+            {% endblock navml %}
+            
+        </div>
+    </nav>
+    <!-- Navbar Ends Here -->
+
+    {% block body %}
+    {% endblock body %}
+
+    {% load static %}
+    <!-- Javascript code start here  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7a10e3388d.js" crossorigin="anonymous"></script>
+    <script src="{% static 'ripechilli/js/preloader.js'%}"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+    <!-- Sidebar JS  -->
+    <script src="{% static 'ripechilli/js/sidebar.js'%}"></script>
+    <!-- Copyright Year  -->
+    <script src="{%static 'ripechilli/js/copyrightYear.js' %}"></script>
+    {% block js %} {% endblock js %}
+</body>
+
+</html>

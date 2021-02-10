@@ -1,0 +1,220 @@
+{%extends 'ripechilli/base.html' %}
+{% block title%}Web Development{%endblock title %}
+{% block navml %}
+{% load static %}
+<li class="nav-item">
+    <a href="tel:+916207781113" class="nav-link navLogo"><i class="fa fa-phone"></i></a>
+</li>
+<li class="nav-item">
+    <a href="mailto: ripechilli@gmail.com" class="nav-link navLogo"><i class="fa fa-envelope"></i></a>
+</li>
+{% endblock navml %}
+{% block body %}
+<section class="headTitle" id="webPlansheadTitle">
+    <div class="container justify-content-center text-center">
+        <p class="headTitleWrd">
+            Web Development
+        </p>
+        <hr class="hr">
+    </div>
+</section>
+<!-- Plans Section Ends  -->
+<section class="webpricelistsec" id="webpricelistsecId">
+    <div class="container">
+        <h3 class="wkowwmTitleTop text-uppercase">Plans</h3>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                <div class="card webpricelistCard">
+                    <div class="card-header webpricelistCardHeader text-center pb-0">
+                        <h4 class="card-title text-white">BASIC</h4>
+                    </div>
+                    <div class="card-body">
+                        <!-- <p class="text-center webpriceintro">
+                            Ideal solution for beginners
+                        </p> -->
+                        <p class="webprice text-center">
+                            <span class="priceLogo basicpricelogo"> <i class="fas fa-rupee-sign"></i></span>4999*
+                        </p>
+                        <li class="webpricelist"> <span class="checkLogo green-text"><i class="fa fa-check"></i>
+                            </span> Dynamic</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"><i class="fa fa-check"></i>
+                            </span> Admin Panel</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"><i class="fa fa-check"></i>
+                            </span> Hosting (1 year)</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"><i class="fa fa-check"></i>
+                            </span> Domain Name (2 years)</li>
+                        <li class="webpricelist"><span class="checkLogo red-text"> <i class="fa fa-times"></i>
+                            </span> Payment Gateway</li>
+                        <li class="webpricelist"><span class="checkLogo red-text"> <i class="fa fa-times"></i>
+                            </span> Sign In System</li>
+                        <li class="webpricelist"><span class="checkLogo red-text"> <i class="fa fa-times"></i>
+                            </span> Basic Logo</li>
+                        <li class="webpricelist"><span class="checkLogo red-text"> <i class="fa fa-times"></i>
+                            </span> Vector Logo</li>
+                        <li class="webpricelist"><span class="checkLogo red-text"> <i class="fa fa-times"></i>
+                            </span> Personalized Email</li>
+                        <li class="webpricelist"><span class="checkLogo red-text"> <i class="fa fa-times"></i>
+                            </span> E-Commerce</li>
+                        <li class="webpricelist">Editing for 1 week</li>
+                        <p class="webpricelistsecBtn mt-5 text-center">
+                             <a href="{% static 'ripechilli/dc/tc.pdf'%}" class="btn" id="webpricelistsecBtnId" download>Know More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                <div class="card webpricelistCard">
+                    <div class="card-header webpricelistCardHeader text-center pb-0">
+                        <h4 class="card-title text-white">MODERN</h4>
+                    </div>
+                    <div class="card-body">
+                        <!-- <p class="text-center webpriceintro">
+                            Best Plan Ever
+                        </p> -->
+                        <p class="webprice text-center">
+                            <span class="priceLogo basicpricelogo"> <i class="fas fa-rupee-sign"></i></span>6999*
+                        </p>
+                        <li class="webpricelist"> <span class="checkLogo green-text"><i class="fa fa-check"></i>
+                            </span> Dynamic</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"><i class="fa fa-check"></i>
+                            </span> Admin Panel</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"><i class="fa fa-check"></i>
+                            </span> Hosting (1 year)</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"><i class="fa fa-check"></i>
+                            </span> Domain Name (2 years)</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"> <i class="fa fa-check"></i>
+                            </span> Payment Gateway</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"> <i class="fa fa-check"></i>
+                            </span> Sign In System</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"> <i class="fa fa-check"></i>
+                            </span> Basic Logo</li>
+                        <li class="webpricelist"><span class="checkLogo red-text"> <i class="fa fa-times"></i>
+                            </span> Vector Logo</li>
+                        <li class="webpricelist"><span class="checkLogo red-text"> <i class="fa fa-times"></i>
+                            </span> Personalized Email</li>
+                        <li class="webpricelist"><span class="checkLogo red-text"> <i class="fa fa-times"></i>
+                            </span> E-Commerce</li>
+                        <li class="webpricelist">Editing for 1 month</li>
+                        <p class="webpricelistsecBtn mt-5 text-center"> <a href="{% static 'ripechilli/dc/tc.pdf'%}" class="btn"
+                                id="webpricelistsecBtnId" download>Know More</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-12 m-auto">
+                <div class="card webpricelistCard">
+                    <div class="card-header webpricelistCardHeader text-center pb-0">
+                        <h4 class="card-title text-white">ADVANCE</h4>
+                    </div>
+                    <div class="card-body">
+                        <!-- <p class="text-center webpriceintro">
+                            Ideal solution for beginners
+                        </p> -->
+                        <p class="webprice text-center">
+                            <span class="priceLogo basicpricelogo"> <i class="fas fa-rupee-sign"></i></span>9999*
+                        </p>
+                        <li class="webpricelist"> <span class="checkLogo green-text"><i class="fa fa-check"></i>
+                            </span> Dynamic</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"><i class="fa fa-check"></i>
+                            </span> Admin Panel</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"><i class="fa fa-check"></i>
+                            </span> Hosting (1 year)</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"><i class="fa fa-check"></i>
+                            </span> Domain Name (2 years)</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"> <i class="fa fa-check"></i>
+                            </span> Payment Gateway</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"> <i class="fa fa-check"></i>
+                            </span> Sign In System</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"> <i class="fa fa-check"></i>
+                            </span> Basic Logo</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"> <i class="fa fa-check"></i>
+                            </span> Vector Logo</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"> <i class="fa fa-check"></i>
+                            </span> Personalized Email (1 year)</li>
+                        <li class="webpricelist"><span class="checkLogo green-text"> <i class="fa fa-check"></i>
+                            </span> E-Commerce</li>
+                        <li class="webpricelist">Editing for 6 months</li>
+                        <p class="webpricelistsecBtn mt-5 text-center"> <a href="{% static 'ripechilli/dc/tc.pdf'%}" class="btn"
+                                id="webpricelistsecBtnId" download>Know More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Plans Section Ends  -->
+
+<!-- What kind of website we make Section start  -->
+<section class="wkowwm" id="wkowwmID">
+    <div class="container">
+        <h3 class="wkowwmTitleTop text-uppercase">What kinds of website we make ?</h3>
+        <div class="row">
+            {% for i in kindofcard %}
+            <div class="col-lg-4 col-md-4 col-sm-6 col-10 m-auto">
+                <div class="card wkowwmCard text-center">
+                    <div class="card-body">
+                        <i class="{{ i.logo_icon }} wkowwmLogo"></i>
+                        <h1 class="wkowwmTitle">{{ i.card_title }}</h1>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 and forloop.counter > 0 and not forloop.last %}
+        </div>
+        <div class="row">
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- What kind of website we make Section Ends  -->
+
+<!-- Frequently Askesd Question Section Starts -->
+<section class="questionSection" id="questionSectionID">
+    <div class="container">
+        <h3 class="questionsectiontitle text-uppercase">
+            Frequently Asked Question :
+        </h3>
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <!--Accordion wrapper-->
+                <div class="accordion md-accordion faqAccordion" id="accordionEx1" role="tablist"
+                    aria-multiselectable="true">
+                    {% for i in faq %}
+                    <!-- Accordion card -->
+                    <div class="card FAQCard">
+
+                        <!-- Card header -->
+                        <div class="card-header" role="tab" id="headingTwo1{{ forloop.counter }}">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1"
+                                href="#collapseFQ1{{ forloop.counter }}" aria-expanded="false"
+                                aria-controls="collapseFQ1{{ forloop.counter }}">
+                                <h5 class="FAQCardH5 mb-0">
+                                    {{ i.faq_title }} <i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
+
+                        <!-- Card body -->
+                        <div id="collapseFQ1{{ forloop.counter }}" class="collapse" role="tabpanel"
+                            aria-labelledby="headingTwo1{{ forloop.counter }}" data-parent="#accordionEx1">
+                            <div class="card-body AccordionCardBody">
+                                {{ i.faq_ans }}
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Accordion card -->
+                    {% endfor %}
+                </div>
+                <!-- Accordion wrapper -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Frequently Askesd Question Section Ends -->
+{%include 'ripechilli/footer.html' %}
+{% endblock body %}
+{% block js %}
+{% load static %}
+<script src="{%static 'ripechilli/js/shadowforplans.js'%}"></script>
+{% endblock js %}

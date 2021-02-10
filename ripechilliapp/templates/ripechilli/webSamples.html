@@ -1,0 +1,42 @@
+{%extends 'ripechilli/base.html' %}
+    {% block navml %}
+    <li class="nav-item">
+        <a href="tel:+916207781113" class="nav-link navLogo"><i class="fa fa-phone"></i></a>
+    </li>
+    <li class="nav-item">
+        <a href="mailto: ripechilli@gmail.com" class="nav-link navLogo"><i class="fa fa-envelope"></i></a>
+    </li>
+    {% endblock navml %}
+  {% block title%}Website Samples{%endblock title %}
+  {% block body %}
+  {% load static %}
+  <section class="headTitle" id="headTitleGetStarted">
+    <div class="container justify-content-center text-center">
+      <p class="headTitleWrd">
+        Website Samples
+      </p>
+      <hr class="hr">
+    </div>
+  </section>
+  <section class="exampleWeb">
+    <div class="container">
+        <div class="row">
+        {% for i in websample %}
+            <div class="col-lg-6 col-12 exampleWebCard">
+                <a href="{{ i.link }}" target="_blank">
+                    <img src="{{ i.image.url }}" class="img-fluid" alt="{{ i.alt }}">
+                    <h3 class="text-center exampleWebCardTitle">
+                        {{ i.title }}
+                    </h3>
+                </a>
+            </div>
+    {% if forloop.counter|divisibleby:2 and forloop.counter > 0 and not forloop.last %}
+        </div>
+        <div class="row">
+    {% endif %}
+        {% endfor %}
+        </div>
+    </div>
+</section>
+{%include 'ripechilli/footer.html' %}
+{% endblock body %}

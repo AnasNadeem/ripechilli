@@ -1,0 +1,39 @@
+<!-- Footer Section Starts  -->
+<section class="footerId">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12 justify-content-center text-center footer-div">
+                <h4 class="footerH4">Ripe Chilli</h4>
+                <p class="footerP">
+                    {% for i in about %}
+                    {{ i.brief|slice:"0:102" }}... <a href="{% url 'About'%}">more</a>
+                    {% endfor %}
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12 justify-content-center text-center footer-div">
+                <h4 class="footerH4">Navigation links</h4>
+                <li><a class="footerNavigationLinksA" href="{%url 'Website'%}">Web Development</a></li>
+                <li><a class="footerNavigationLinksA" href="{%url 'Logo'%}">Logo Designing</a></li>
+                <li><a class="footerNavigationLinksA" href="tel: +916207781113">Contact Us</a></li>
+                <li><a class="footerNavigationLinksA" href="{%url 'About'%}">About</a></li>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12 justify-content-center text-center footer-div">
+                <h4 class="footerH4">Social Links</h4>
+                <li><a class="fbitext" target="_blank" href="https://www.facebook.com/RipeChilli-108016087677287/">Facebook <i class="fa fa-facebook fbi" aria-hidden="true"></i></a>
+                </li>   
+                <li><a class="insitext" target="_blank" href="https://www.instagram.com/ripechilli/">Instagram <i class="fa fa-instagram insi" aria-hidden="true"></i></a>
+                </li>
+                <li><a class="twitext" target="_blank" href="https://twitter.com/RipeChilli">Twitter <i class="fa fa-twitter twi" aria-hidden="true"></i></a>
+                </li>
+                <li> <a class="linkedintext" target="_blank" href="https://www.linkedin.com/company/ripechilli/">LinkedIn <i class="fa fa-linkedin lnkti"
+                            aria-hidden="true"></i></a></li>
+            </div>
+        </div>
+        <div class="mt-4 text-center">
+            <p class="footerCopyrightyearP">Copyright <i class="fa fa-copyright" aria-hidden="true"></i> <span
+                    id="copyrightYear"></span> | All Rights Reserved.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- Footer Section Ends -->

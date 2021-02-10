@@ -1,0 +1,143 @@
+{%extends 'ripechilli/base.html' %}
+    {% block title%}Ripe Chilli{%endblock title %}
+    {% block navml %}
+    <form class="form-inline my-2 my-lg-0 ml-auto d-none d-sm-none d-md-block">
+        <a href="#headTitleGetStarted" class="btn getstartedNav">Get Started</a>
+    </form>
+    {% endblock navml %}
+    {% block body %}
+    {% load static %}
+    <section class="introRC" id="BodytoTrigger">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 d-none d-sm-none d-md-block">
+                    <p class="introRCTitle mb-0">Welcome To RipeChilli</p>
+                    <p class="animate__animated animate__fadeInLeft animate__slow introRCPunchLine lead mx-3">We Link You
+                        With The Future</p>
+                    <div class="row projectL">
+                        <div class="col-lg-4 col-md-4">
+                            <i
+                                class="fas fa-store storeLogo animate__animated animate__fadeInLeft animate__delay-2s animate__slow"></i>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <!-- <i class="fas fa-running storeLogo"></i> -->
+                            <img src="{%static 'ripechilli/images/runman.svg'%}"
+                                class="img-fluid storeLogo animate__animated animate__fadeInLeft animate__delay-2s animate__slow"
+                                alt="Ripe Chilli">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <i
+                                class="fas fa-globe storeLogo animate__animated animate__fadeInLeft animate__delay-2s animate__slow"></i>
+                        </div>
+                    </div>
+                    <div class="container text-center">
+                        <a href="#headTitleGetStarted" class="btn getStartedBtn">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 d-none d-sm-none d-md-block">
+                    <img src="{%static 'ripechilli/images/chilloi.svg'%}"
+                        class="img-fluid rightchilliimageindex animate__animated animate__bounceInUp animate__slow"
+                        alt="RipeChilli Logo">
+                </div>
+                <div class="col-sm-8 col-8 d-block d-sm-none d-sm-block d-md-none">
+                    <p class="introRCTitle mb-0 text-center">Welcome To RipeChilli</p>
+                    <p class="animate__animated animate__fadeInLeft animate__slow introRCPunchLine lead">We Link You With
+                        The Future</p>
+                </div>
+                <div class="col-sm-4 col-4 d-block d-sm-none d-sm-block d-md-none">
+                    <img src="{%static 'ripechilli/images/chilloi.svg'%}"
+                        class="img-fluid rightchilliimageindex animate__animated animate__bounceInUp animate__slow"
+                        alt="RipeChilli Logo">
+                </div>
+                <div class="container d-block d-sm-none d-sm-block d-md-none">
+                    <div class="row projectL">
+                        <div class="col-sm-4 col-4">
+                            <i
+                                class="fas fa-store storeLogo animate__animated animate__fadeInLeft animate__delay-2s animate__slow"></i>
+                        </div>
+                        <div class="col-sm-4 col-4">
+                            <!-- <i class="fas fa-running storeLogo"></i> -->
+                            <img src="{%static 'ripechilli/images/runman.svg'%}"
+                                class="img-fluid storeLogo runningman animate__animated animate__fadeInLeft animate__delay-2s animate__slow"
+                                alt="Ripe Chilli">
+                        </div>
+                        <div class="col-sm-4 col-4">
+                            <i
+                                class="fas fa-globe storeLogo animate__animated animate__fadeInLeft animate__delay-2s animate__slow"></i>
+                        </div>
+                    </div>
+                    <div class="container text-center d-sm-none d-sm-block d-md-none">
+                        <a href="#headTitleGetStarted" class="btn getStartedBtn">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why RC Begins  -->
+    <section class="whyRC">
+        <div class="container">
+            <p class="text-center whyRcMainTitle">
+                Why Ripe Chilli ?
+            </p>
+            <div class="row">
+            {% for i in whyRC %}
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                    <div class="whyRCCard text-center">
+                        <i class="{{ i.logo }} whyLogo"></i>
+                        <h4 class="whyRCCardTitle">
+                            {{ i.Title }}
+                        </h4>
+                        <p class="whyRCCardpara">
+                            {{ i.Desc }}
+                        </p>
+                    </div>
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- Why RC Ends  -->
+ <section class="headTitle" id="headTitleGetStarted">
+    <div class="container justify-content-center text-center">
+      <p class="headTitleWrd">
+        Get Started
+      </p>
+      <hr class="hr">
+    </div>
+  </section>
+  <!-- getStartedProd Begins Here  -->
+  <section class="getStartedProd" id="getStartedProdId">
+    <div class="container">
+      <h3 class="getStartedProdTitle">
+        Just a Step Ahead
+        <i class="fas fa-running"></i>
+      </h3>
+      <div class="row">
+        {% for i in card %}
+        <!-- {% url 'Website' as website_url %}
+        {% url 'Logo' as logo_url %} -->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+          <!-- Card -->
+          <div class="card card-image getStartedProdCard"
+            style="background-image: url({% static 'ripechilli/images/ppcl.jpg'%});">
+
+            <!-- Content -->
+            <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+              <div>
+                <h5 class="getStartedProdCardTitle"><i class="{{ i.logo }}"></i> {{ i.card_title }}</h5>
+                <h3 class="card-title text-white pt-2"><strong>{{ i.card_tagline }}</strong></h3>
+                <p>{{ i.card_desc }}</p>
+                <a class="btn getStartedProdCardBtn" href="{{ i.link }}"><i class="fas fa-clone left"></i>{{ i.card_btn }}</a>
+              </div>
+            </div>
+
+          </div>
+          <!-- Card -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <!-- getStartedProd Ends Here  -->
+{%include 'ripechilli/footer.html' %}
+    {% endblock body %}
