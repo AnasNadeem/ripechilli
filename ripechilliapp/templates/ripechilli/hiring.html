@@ -1,0 +1,121 @@
+{%extends 'ripechilli/base.html' %}
+    {% block navml %}
+    <li class="nav-item">
+        <a href="tel:+916207781113" class="nav-link navLogo"><i class="fa fa-phone"></i></a>
+    </li>
+    <li class="nav-item">
+        <a href="mailto: ripechilli@gmail.com" class="nav-link navLogo"><i class="fa fa-envelope"></i></a>
+    </li>
+    {% endblock navml %}
+  {% block title%}Internship Form{%endblock title %}
+  {% block body %}
+  {% if messages %}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Hooray!!</strong> 
+    {%for i in messages%}
+      {{i}}
+    {%endfor%}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+    
+  {% endif %}
+    <section class="formContact" id="formContactID">
+        <div class="container">
+            <!--  form contact -->
+            <div class="card formContactCard">
+
+                <h5 class="card-header formContactCardHead white-text text-center py-4">
+                    <strong>Get Internship!!</strong>
+                </h5>
+                <div class="card-body">
+                    <form method="POST" action="">
+                    {% csrf_token %}
+                        <div class="form-group">
+                            <label class="formContactLabel" for="fullNameformContact">Full Name</label>
+                            <input type="text" name="name" class="form-control" id="studentName"
+                                placeholder="Full Name">
+                                <small id="studentNameAlert" class="smallValidation">Name should be of 2 to *40 characters</small>
+                        </div>
+                        <div class="form-group">
+                            <label class="formContactLabel" for="emailAddformContact">Email address</label>
+                            <input type="email" name="email" class="form-control" id="emailName"
+                                placeholder="name@gmail.com">
+                                <small id="emailNameAlert" class="smallValidation">Submit your current email address</small>
+                        </div>
+                        <div class="form-group">
+                            <label class="formContactLabel" for="phoneNumformContact">Phone Number</label>
+                            <input type="number" name="phone" class="form-control" id="phoneNumber"
+                                placeholder="+91 6207781113">
+                                <small id="phoneNumberAlert" class="smallValidation">Phone number should be of 10 digits</small>
+                        </div>
+                        <div class="form-group">
+                            <label class="formContactLabel" for="subjectForForm">Profession</label>
+                            <select class="form-control" id="subjectForForm" name="profession">
+                                    {%for i in form.proffesion%}
+                                        {{i}}
+                                    {%endfor%}
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                              <label for="inputZip">PIN Code</label>
+                              <input
+                                type="text"
+                                class="form-control inputFormInput"
+                                name="pin_code"
+                                id="inputZip"
+                                placeholder="PIN Code"
+                                required
+                              />
+                              <small id="inputZipAlert" class="smallValidation">PIN Code should be of 6 digits</small>
+                            </div>
+                            <div class="form-group col-md-4">
+                              <label for="inputCity">City</label>
+                              <input
+                                type="text"
+                                class="form-control inputFormInput"
+                                name="city"
+                                id="inputCity"
+                                placeholder="City Name"
+                                required
+                              />
+                              <small id="inputCityAlert" class="smallValidation">City name should be of 2 to *40 characters</small>
+                            </div>
+                            <div class="form-group col-md-4">
+                              <label for="inputState">State</label>
+                              <input
+                                type="text"
+                                class="form-control inputFormInput"
+                                name="state"
+                                id="inputState"
+                                placeholder="State Name"
+                                required
+                              />
+                              <small id="inputStateAlert" class="smallValidation">State name should be of 2 to *40 characters</small>
+                            </div>
+                          </div>
+                        <div class="form-group">
+                            <label class="formContactLabel" for="leaveaMessage">Why should you be hired?</label>
+                            <textarea class="form-control" name="question1" id="leaveaMessage" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="formContactLabel" for="leaveaMessage">Any previous works? (Mention If Any:)</label>
+                            <textarea class="form-control" name="question2" id="leaveaMessage" rows="3" required></textarea>
+                        </div>
+                        <button class="btn formContactCardBtn btn-block" id="submitBtnId" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <!--  form contact -->
+        </div>
+    </section>
+{%include 'ripechilli/footer.html' %}
+{% endblock %}
+
+{% block js %} 
+{% load static %}
+<!-- FormAuthentication JS  -->
+<script src="{%static 'ripechilli/js/formauthen.js' %}"></script>
+{% endblock js %}

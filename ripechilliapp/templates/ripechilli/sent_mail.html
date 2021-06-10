@@ -1,0 +1,14 @@
+{%extends 'ripechilli/base.html' %} {% block title%}Ripe Chilli{%endblock title%} {% block body %}
+<div class="container mt-4">
+    <form method="Post" class="form-signin">
+        {% csrf_token %}
+        <input type="text" class="form-control mt-2" name="mail_one" placeholder="Mail Address" />
+        <input type="text" class="form-control mt-2" name="mail_two" placeholder="Mail Address" />
+        <input type="text" class="form-control mt-2" name="mail_three" placeholder="Mail Address" />
+        <input type="text" class="form-control mt-2" name="mail_four" placeholder="Mail Address" />
+        <input type="text" class="form-control mt-2" name="mail_five" placeholder="Mail Address" />
+        <input type="submit" value="Send Mail" class="btn btn-primary" />
+    </form>
+</div>
+
+{% endblock body %}3

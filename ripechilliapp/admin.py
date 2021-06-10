@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import IndexImg, KindOfCards, Faqs, AboutRipe ,GetStarted, Plans, Contact, keywords, WhyRipeChilli, WebSamples
+from .models import IndexImg, KindOfCards, Faqs, AboutRipe ,GetStarted, Plans, Contact, keywords, WhyRipeChilli, WebSamples, Internship
 # Register your models here.
 
 admin.site.register(IndexImg)
@@ -12,3 +12,4 @@ admin.site.register(Contact)
 admin.site.register(keywords)
 admin.site.register(WhyRipeChilli)
 admin.site.register(WebSamples)
+admin.site.register(Internship)

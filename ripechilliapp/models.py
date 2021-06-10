@@ -73,6 +73,28 @@ class Contact(models.Model):
     def __str__(self):
         return self.name
 
+
+TYPEINTERN = [
+    ('MARKETING', 'MARKETING'),
+    ('GRAPHICS DESIGNER', 'GRAPHICS DESIGNER'),
+    ('WEB DEVELOPER', 'WEB DEVELOPER'),
+]
+
+class Internship(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.CharField(max_length=100)
+    phone = models.CharField(max_length=12)
+    pin_code = models.CharField(max_length=5)
+    city = models.CharField(max_length=20)
+    state = models.CharField(max_length=30)
+    proffesion = models.CharField(choices=TYPEINTERN, max_length=100,default="")
+    question1 = models.TextField()
+    question2 = models.TextField()
+    
+    def __str__(self):
+        return f"{self.name} from {self.city} in {self.state}"
+    
+
 class keywords(models.Model):
     terms = models.TextField()
 
